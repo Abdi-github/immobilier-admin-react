@@ -1,0 +1,706 @@
+{
+  "common": {
+    "appName": "Immobilier Admin",
+    "loading": "Caricamento...",
+    "noData": "Nessun dato disponibile",
+    "error": "Errore",
+    "notFound": "Non trovato",
+    "navigation": {
+      "dashboard": "Dashboard",
+      "home": "Home"
+    },
+    "actions": {
+      "create": "Crea",
+      "edit": "Modifica",
+      "delete": "Elimina",
+      "save": "Salva",
+      "cancel": "Annulla",
+      "confirm": "Conferma",
+      "search": "Cerca",
+      "filter": "Filtra",
+      "export": "Esporta",
+      "import": "Importa",
+      "refresh": "Aggiorna",
+      "retry": "Riprova",
+      "back": "Indietro",
+      "view": "Visualizza",
+      "approve": "Approva",
+      "reject": "Rifiuta",
+      "publish": "Pubblica",
+      "archive": "Archivia"
+    },
+    "errors": {
+      "generic": "Si è verificato un errore. Riprova.",
+      "notFound": "Risorsa non trovata",
+      "unauthorized": "Non sei autorizzato a eseguire questa azione",
+      "validation": "Controlla i tuoi dati"
+    },
+    "success": {
+      "created": "Creato con successo",
+      "updated": "Aggiornato con successo",
+      "deleted": "Eliminato con successo",
+      "saved": "Salvato con successo"
+    }
+  },
+  "auth": {
+    "login": "Accedi",
+    "logout": "Esci",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Password dimenticata?",
+    "rememberMe": "Ricordami",
+    "loginTitle": "Accedi al tuo account",
+    "errors": {
+      "invalidCredentials": "Email o password non validi",
+      "accountLocked": "Account bloccato",
+      "sessionExpired": "Sessione scaduta. Effettua nuovamente l'accesso.",
+      "adminOnly": "Accesso negato. Il pannello di amministrazione è riservato agli amministratori della piattaforma."
+    }
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "properties": "Proprietà",
+    "agencies": "Agenzie",
+    "users": "Utenti",
+    "categories": "Categorie",
+    "amenities": "Servizi",
+    "locations": "Località",
+    "translations": "Traduzioni",
+    "settings": "Impostazioni",
+    "roles": "Ruoli",
+    "permissions": "Permessi"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Bentornato",
+    "stats": {
+      "totalProperties": "Totale proprietà",
+      "pendingApproval": "In attesa di approvazione",
+      "activeAgencies": "Agenzie attive",
+      "totalUsers": "Totale utenti"
+    }
+  },
+  "properties": {
+    "title": "Proprietà",
+    "subtitle": "Gestisci {{total}} proprietà",
+    "list": "Elenco proprietà",
+    "create": "Crea proprietà",
+    "edit": "Modifica proprietà",
+    "details": "Dettagli proprietà",
+    "allProperties": "Tutte le proprietà",
+    "noPendingProperties": "Nessuna proprietà in attesa di approvazione",
+    "noPropertiesFound": "Nessuna proprietà trovata",
+    "noImagesAvailable": "Nessuna immagine disponibile",
+    "noTranslationsAvailable": "Nessuna traduzione disponibile",
+    "noDescription": "Nessuna descrizione disponibile",
+    "noResults": "Nessuna proprietà corrisponde ai criteri di ricerca",
+    "confirmDelete": "Sei sicuro di voler eliminare questa proprietà?",
+    "deleteWarning": "Questa azione non può essere annullata.",
+    "approveConfirm": "Sei sicuro di voler approvare questa proprietà?",
+    "publishConfirm": "Sei sicuro di voler pubblicare questa proprietà?",
+    "archiveConfirm": "Sei sicuro di voler archiviare questa proprietà?",
+    "rejectTitle": "Rifiuta proprietà",
+    "rejectReason": "Motivo del rifiuto",
+    "rejectReasonPlaceholder": "Inserisci il motivo del rifiuto...",
+    "rejectReasonRequired": "Il motivo del rifiuto è obbligatorio",
+    "rejectionReason": "Motivo del rifiuto",
+    "additionalCosts": "Spese accessorie",
+    "primaryImage": "Principale",
+    "selectedCount": "{{count}} selezionati",
+    "images": "Immagini della proprietà",
+    "noImagesUploaded": "Nessuna immagine caricata",
+    "dragDropImages": "Trascina e rilascia le immagini qui",
+    "orClickToSelect": "o clicca per selezionare i file",
+    "uploading": "Caricamento...",
+    "uploadFailed": "Caricamento fallito",
+    "imageDeleted": "Immagine eliminata con successo",
+    "imageDeleteFailed": "Impossibile eliminare l'immagine",
+    "primaryImageSet": "Immagine principale impostata con successo",
+    "primaryImageFailed": "Impossibile impostare l'immagine principale",
+    "primary": "Principale",
+    "setPrimary": "Imposta come principale",
+    "saveBeforeUpload": "Salva la proprietà prima di caricare le immagini",
+    "imageUploadAfterCreate": "Puoi caricare le immagini dopo aver creato la proprietà",
+    "pendingApprovals": {
+      "title": "Approvazioni in sospeso",
+      "subtitle": "{{count}} proprietà in attesa di revisione",
+      "description": "Esamina e gestisci le proprietà in attesa di approvazione",
+      "empty": "Nessuna approvazione in sospeso",
+      "emptyMessage": "Tutte le proprietà sono state esaminate. Torna più tardi per nuove proposte."
+    },
+    "actions": {
+      "create": "Aggiungi proprietà",
+      "submit": "Invia per approvazione",
+      "submitForApproval": "Invia per approvazione",
+      "approve": "Approva",
+      "reject": "Rifiuta",
+      "publish": "Pubblica",
+      "archive": "Archivia",
+      "delete": "Elimina",
+      "viewDetails": "Visualizza dettagli",
+      "resubmit": "Reinvia",
+      "republish": "Ripubblica"
+    },
+    "columns": {
+      "title": "Titolo",
+      "type": "Tipo",
+      "price": "Prezzo",
+      "location": "Posizione",
+      "status": "Stato",
+      "date": "Data",
+      "actions": "Azioni"
+    },
+    "fields": {
+      "title": "Titolo",
+      "description": "Descrizione",
+      "price": "Prezzo",
+      "rooms": "Stanze",
+      "surface": "Superficie (m²)",
+      "address": "Indirizzo",
+      "status": "Stato",
+      "transactionType": "Tipo di transazione",
+      "category": "Categoria",
+      "agency": "Agenzia",
+      "city": "Città",
+      "canton": "Cantone",
+      "postalCode": "Codice postale",
+      "additionalCosts": "Spese accessorie",
+      "currency": "Valuta",
+      "externalId": "ID esterno",
+      "externalUrl": "URL esterno",
+      "sourceLanguage": "Lingua di origine",
+      "createdAt": "Creato il",
+      "updatedAt": "Aggiornato il",
+      "publishedAt": "Pubblicato il",
+      "reviewedAt": "Esaminato il",
+      "reviewedBy": "Esaminato da",
+      "rejectionReason": "Motivo del rifiuto"
+    },
+    "status": {
+      "DRAFT": "Bozza",
+      "PENDING_APPROVAL": "In attesa di approvazione",
+      "APPROVED": "Approvato",
+      "REJECTED": "Rifiutato",
+      "PUBLISHED": "Pubblicato",
+      "ARCHIVED": "Archiviato"
+    },
+    "transactionType": {
+      "rent": "In affitto",
+      "buy": "In vendita"
+    },
+    "sections": {
+      "basicInfo": "Informazioni di base",
+      "location": "Posizione",
+      "pricing": "Prezzi",
+      "images": "Immagini",
+      "translations": "Traduzioni",
+      "amenities": "Servizi",
+      "metadata": "Metadati",
+      "proximity": "Vicinanza"
+    },
+    "details": {
+      "basicInfo": "Informazioni di base",
+      "description": "Descrizione",
+      "translations": "Traduzioni",
+      "images": "Immagini",
+      "location": "Posizione"
+    },
+    "tabs": {
+      "details": "Dettagli",
+      "images": "Immagini",
+      "translations": "Traduzioni"
+    },
+    "filters": {
+      "allStatuses": "Tutti gli stati",
+      "allTypes": "Tutti i tipi",
+      "allTransactions": "Tutte le transazioni"
+    },
+    "translations": {
+      "language": "Lingua",
+      "source": "Fonte",
+      "status": "Stato",
+      "quality": "Qualità",
+      "original": "Originale"
+    },
+    "rejectModal": {
+      "title": "Rifiuta proprietà",
+      "reasonLabel": "Motivo del rifiuto",
+      "reasonPlaceholder": "Fornisci un motivo per il rifiuto..."
+    },
+    "deleteModal": {
+      "title": "Elimina proprietà",
+      "message": "Sei sicuro di voler eliminare \"{{title}}\"? Questa azione non può essere annullata."
+    },
+    "messages": {
+      "approveSuccess": "Proprietà approvata con successo",
+      "rejectSuccess": "Proprietà rifiutata con successo",
+      "publishSuccess": "Proprietà pubblicata con successo",
+      "archiveSuccess": "Proprietà archiviata con successo",
+      "deleteSuccess": "Proprietà eliminata con successo",
+      "rejected": "Proprietà rifiutata con successo",
+      "deleted": "Proprietà eliminata con successo",
+      "approved": "Proprietà approvata con successo",
+      "published": "Proprietà pubblicata con successo",
+      "archived": "Proprietà archiviata con successo",
+      "submitted": "Proprietà inviata per approvazione"
+    },
+    "errors": {
+      "loadFailed": "Impossibile caricare le proprietà",
+      "notFound": "Proprietà non trovata",
+      "notFoundMessage": "La proprietà che stai cercando non esiste o è stata rimossa.",
+      "deleteFailed": "Impossibile eliminare la proprietà",
+      "rejectFailed": "Impossibile rifiutare la proprietà",
+      "approveFailed": "Impossibile approvare la proprietà",
+      "publishFailed": "Impossibile pubblicare la proprietà"
+    },
+    "table": {
+      "id": "ID",
+      "title": "Titolo",
+      "price": "Prezzo",
+      "location": "Posizione",
+      "status": "Stato",
+      "type": "Tipo",
+      "actions": "Azioni"
+    }
+  },
+  "agencies": {
+    "title": "Agenzie",
+    "subtitle": "Gestisci agenzie immobiliari",
+    "list": "Elenco agenzie",
+    "create": "Crea agenzia",
+    "createAgency": "Crea agenzia",
+    "editAgency": "Modifica agenzia",
+    "addAgency": "Aggiungi agenzia",
+    "edit": "Modifica agenzia",
+    "details": "Dettagli agenzia",
+    "verified": "Verificato",
+    "unverified": "Non verificato",
+    "verifiedOn": "Verificato il {{date}}",
+    "properties": "Proprietà",
+    "changeStatus": "Cambia stato",
+    "searchPlaceholder": "Cerca agenzie...",
+    "allStatuses": "Tutti gli stati",
+    "allVerification": "Tutte le verifiche",
+    "noResults": "Nessuna agenzia trovata corrispondente ai criteri",
+    "fields": {
+      "name": "Nome",
+      "email": "Email",
+      "phone": "Telefono",
+      "address": "Indirizzo",
+      "website": "Sito web",
+      "status": "Stato",
+      "slug": "Slug",
+      "description": "Descrizione",
+      "contactPerson": "Persona di contatto",
+      "postalCode": "Codice postale",
+      "city": "Città",
+      "canton": "Cantone",
+      "location": "Posizione",
+      "contact": "Contatto",
+      "properties": "Proprietà",
+      "verified": "Verifica",
+      "isVerified": "Agenzia verificata",
+      "verifiedAt": "Verificato il"
+    },
+    "status": {
+      "active": "Attiva",
+      "pending": "In attesa",
+      "suspended": "Sospesa",
+      "inactive": "Inattiva"
+    },
+    "stats": {
+      "total": "Agenzie totali",
+      "active": "Attive",
+      "pending": "In attesa",
+      "suspended": "Sospese",
+      "verified": "Verificate",
+      "totalProperties": "Proprietà totali"
+    },
+    "sections": {
+      "basicInfo": "Informazioni di base",
+      "contact": "Informazioni di contatto",
+      "location": "Posizione",
+      "status": "Stato e verifica",
+      "description": "Descrizione",
+      "meta": "Metadati"
+    },
+    "actions": {
+      "verify": "Verifica agenzia",
+      "unverify": "Rimuovi verifica"
+    },
+    "placeholders": {
+      "slugAuto": "Generato automaticamente se vuoto",
+      "cantonId": "ID cantone",
+      "cityId": "ID città"
+    },
+    "confirmDelete": {
+      "title": "Elimina agenzia",
+      "message": "Sei sicuro di voler eliminare \"{{name}}\"? Questa azione non può essere annullata."
+    },
+    "confirmStatusChange": {
+      "title": "Cambia stato agenzia",
+      "message": "Sei sicuro di voler cambiare lo stato di \"{{name}}\" in \"{{status}}\"?"
+    },
+    "messages": {
+      "created": "Agenzia creata con successo",
+      "updated": "Agenzia aggiornata con successo",
+      "deleted": "Agenzia eliminata con successo",
+      "verified": "Agenzia verificata con successo",
+      "unverified": "Verifica dell'agenzia rimossa",
+      "statusUpdated": "Stato dell'agenzia aggiornato con successo"
+    },
+    "errors": {
+      "loadFailed": "Impossibile caricare le agenzie",
+      "notFound": "Agenzia non trovata",
+      "createFailed": "Impossibile creare l'agenzia",
+      "updateFailed": "Impossibile aggiornare l'agenzia",
+      "deleteFailed": "Impossibile eliminare l'agenzia",
+      "verifyFailed": "Impossibile verificare l'agenzia",
+      "unverifyFailed": "Impossibile rimuovere la verifica",
+      "statusUpdateFailed": "Impossibile aggiornare lo stato dell'agenzia"
+    }
+  },
+  "users": {
+    "title": "Utenti",
+    "subtitle": "Gestisci account utenti e permessi",
+    "list": "Elenco utenti",
+    "create": "Crea utente",
+    "edit": "Modifica utente",
+    "details": "Dettagli utente",
+    "noUsersFound": "Nessun utente trovato",
+    "noResults": "Nessun utente corrisponde alla ricerca",
+    "selectedCount": "{{count}} selezionato/i",
+    "fields": {
+      "firstName": "Nome",
+      "lastName": "Cognome",
+      "email": "Email",
+      "phone": "Telefono",
+      "avatar": "Avatar",
+      "role": "Ruolo",
+      "userType": "Tipo utente",
+      "status": "Stato",
+      "agency": "Agenzia",
+      "preferredLanguage": "Lingua preferita",
+      "emailVerified": "Email verificata",
+      "password": "Password",
+      "confirmPassword": "Conferma password",
+      "createdAt": "Creato il",
+      "updatedAt": "Aggiornato il",
+      "lastLogin": "Ultimo accesso"
+    },
+    "types": {
+      "end_user": "Utente finale",
+      "owner": "Proprietario",
+      "agent": "Agente",
+      "agency_admin": "Admin agenzia",
+      "platform_admin": "Admin piattaforma",
+      "super_admin": "Super Admin"
+    },
+    "status": {
+      "active": "Attivo",
+      "pending": "In attesa",
+      "suspended": "Sospeso",
+      "inactive": "Inattivo"
+    },
+    "columns": {
+      "user": "Utente",
+      "email": "Email",
+      "type": "Tipo",
+      "status": "Stato",
+      "agency": "Agenzia",
+      "createdAt": "Iscritto il",
+      "actions": "Azioni"
+    },
+    "filters": {
+      "allStatuses": "Tutti gli stati",
+      "allTypes": "Tutti i tipi",
+      "searchPlaceholder": "Cerca per nome o email..."
+    },
+    "actions": {
+      "create": "Aggiungi utente",
+      "edit": "Modifica",
+      "view": "Visualizza dettagli",
+      "suspend": "Sospendi",
+      "activate": "Attiva",
+      "delete": "Elimina",
+      "resetPassword": "Reimposta password",
+      "more": "Altre azioni"
+    },
+    "statistics": {
+      "totalUsers": "Totale utenti",
+      "activeUsers": "Utenti attivi",
+      "pendingUsers": "In attesa",
+      "suspendedUsers": "Sospesi",
+      "byType": "Per tipo"
+    },
+    "sections": {
+      "accountInfo": "Informazioni account",
+      "contactInfo": "Informazioni di contatto",
+      "statusInfo": "Informazioni stato",
+      "agencyInfo": "Informazioni agenzia",
+      "securityInfo": "Sicurezza"
+    },
+    "deleteModal": {
+      "title": "Elimina utente",
+      "message": "Sei sicuro di voler eliminare {{name}}? Questa azione non può essere annullata."
+    },
+    "suspendModal": {
+      "title": "Sospendi utente",
+      "message": "Sei sicuro di voler sospendere {{name}}? Non potrà più accedere al suo account."
+    },
+    "messages": {
+      "created": "Utente creato con successo",
+      "updated": "Utente aggiornato con successo",
+      "deleted": "Utente eliminato con successo",
+      "suspended": "Utente sospeso con successo",
+      "activated": "Utente attivato con successo",
+      "statusUpdated": "Stato aggiornato con successo"
+    },
+    "errors": {
+      "loadFailed": "Impossibile caricare gli utenti",
+      "notFound": "Utente non trovato",
+      "createFailed": "Creazione fallita",
+      "updateFailed": "Aggiornamento fallito",
+      "deleteFailed": "Eliminazione fallita",
+      "suspendFailed": "Sospensione fallita",
+      "activateFailed": "Attivazione fallita"
+    },
+    "validation": {
+      "emailRequired": "L'email è obbligatoria",
+      "emailInvalid": "Inserisci un'email valida",
+      "firstNameRequired": "Il nome è obbligatorio",
+      "lastNameRequired": "Il cognome è obbligatorio",
+      "passwordRequired": "La password è obbligatoria",
+      "passwordMinLength": "La password deve avere almeno 8 caratteri",
+      "passwordMismatch": "Le password non corrispondono",
+      "userTypeRequired": "Il tipo utente è obbligatorio"
+    },
+    "permissionLevel": {
+      "standard": "Standard",
+      "elevated": "Elevato",
+      "admin": "Admin"
+    }
+  },
+  "translations": {
+    "pageTitle": "Traduzioni",
+    "pageDescription": "Gestisci le traduzioni delle proprietà e le approvazioni",
+    "title": "Traduzioni proprietà",
+    "list": "Elenco traduzioni",
+    "searchPlaceholder": "Cerca traduzioni...",
+    "noResults": "Nessuna traduzione trovata",
+    "allLanguages": "Tutte le lingue",
+    "allStatuses": "Tutti gli stati",
+    "allSources": "Tutte le fonti",
+    "property": "Proprietà",
+    "language": "Lingua",
+    "source": "Fonte",
+    "qualityScore": "Punteggio qualità",
+    "status": "Stato",
+    "approvedAt": "Approvato il",
+    "approvedBy": "Approvato da",
+    "fetchError": "Caricamento traduzioni non riuscito",
+    "viewProperty": "Visualizza proprietà",
+    "viewTranslation": "Visualizza traduzione",
+    "approveSuccess": "Traduzione approvata con successo",
+    "rejectSuccess": "Traduzione rifiutata con successo",
+    "approveError": "Approvazione traduzione non riuscita",
+    "rejectError": "Rifiuto traduzione non riuscito",
+    "approveTitle": "Approva traduzione",
+    "approveConfirm": "Sei sicuro di voler approvare questa traduzione?",
+    "rejectTitle": "Rifiuta traduzione",
+    "rejectReason": "Motivo del rifiuto",
+    "rejectReasonPlaceholder": "Inserisci il motivo del rifiuto...",
+    "rejectReasonRequired": "Il motivo del rifiuto è richiesto",
+    "requestTranslations": "Richiedi traduzioni",
+    "requestDescription": "Richiedi traduzioni automatiche per la proprietà {{propertyId}} tramite LibreTranslate. Le traduzioni verranno create con stato IN ATTESA e richiederanno l'approvazione di un amministratore.",
+    "sourceLanguage": "Lingua di origine",
+    "existingTranslations": "Traduzioni esistenti",
+    "targetLanguages": "Lingue di destinazione",
+    "allLanguagesCovered": "Tutte le lingue hanno già traduzioni!",
+    "note": "Nota",
+    "autoTranslationNote": "Le traduzioni automatiche sono generate da LibreTranslate. La qualità può variare - si prega di revisionare e modificare se necessario prima di approvare.",
+    "requesting": "Richiesta in corso...",
+    "translationsRequested": "{{count}} traduzione/i creata/e con successo!",
+    "noTranslationsNeeded": "Nessuna traduzione necessaria - tutte le lingue sono coperte",
+    "translationsRequestedNote": "Le traduzioni vengono create con stato IN ATTESA e richiedono l'approvazione di un amministratore.",
+    "requestError": "Richiesta traduzioni non riuscita",
+    "bulkApprove": "Approva selezionati",
+    "bulkApproveSuccess": "{{count}} traduzione/i approvata/e con successo",
+    "bulkApproveError": "Approvazione di alcune traduzioni non riuscita",
+    "bySource": "Per fonte",
+    "totalTranslations": "Totale: {{count}}",
+    "sources": {
+      "original": "Originale",
+      "deepl": "DeepL",
+      "human": "Umano",
+      "machine": "Macchina (LibreTranslate)"
+    },
+    "statuses": {
+      "PENDING": "In attesa",
+      "APPROVED": "Approvato",
+      "REJECTED": "Rifiutato"
+    },
+    "languages": {
+      "en": "Inglese",
+      "fr": "Francese",
+      "de": "Tedesco",
+      "it": "Italiano"
+    }
+  },
+  "roles": {
+    "title": "Ruoli",
+    "management": "Gestione ruoli",
+    "list": "Ruoli",
+    "create": "Crea ruolo",
+    "createRole": "Crea ruolo",
+    "editRole": "Modifica ruolo",
+    "deleteRole": "Elimina ruolo",
+    "roleInfo": "Informazioni ruolo",
+    "roleDetails": "Dettagli ruolo",
+    "roleNotFound": "Ruolo non trovato",
+    "name": "Nome ruolo",
+    "nameHelp": "Identificatore univoco del ruolo (es. property_manager)",
+    "displayName": "Nome visualizzato",
+    "description": "Descrizione",
+    "permissions": "Permessi",
+    "type": "Tipo",
+    "systemRole": "Ruolo di sistema",
+    "customRole": "Ruolo personalizzato",
+    "systemOnly": "Ruoli di sistema",
+    "customOnly": "Ruoli personalizzati",
+    "allTypes": "Tutti i tipi",
+    "noRolesFound": "Nessun ruolo trovato",
+    "noPermissionsAssigned": "Nessun permesso assegnato a questo ruolo",
+    "multilingualNames": "Nomi multilingue",
+    "confirmDelete": "Sei sicuro di voler eliminare il ruolo \"{{name}}\"? Questa azione non può essere annullata.",
+    "messages": {
+      "created": "Ruolo creato con successo",
+      "updated": "Ruolo aggiornato con successo",
+      "deleted": "Ruolo eliminato con successo",
+      "permissionsUpdated": "Permessi del ruolo aggiornati con successo"
+    },
+    "errors": {
+      "loadFailed": "Caricamento ruoli fallito",
+      "notFound": "Ruolo non trovato",
+      "createFailed": "Creazione ruolo fallita",
+      "updateFailed": "Aggiornamento ruolo fallito",
+      "deleteFailed": "Eliminazione ruolo fallita",
+      "cannotDeleteSystem": "I ruoli di sistema non possono essere eliminati"
+    }
+  },
+  "permissions": {
+    "title": "Permessi",
+    "management": "Gestione permessi",
+    "list": "Permessi",
+    "listView": "Vista elenco",
+    "groupedView": "Raggruppato per risorsa",
+    "create": "Crea permesso",
+    "createPermission": "Crea permesso",
+    "editPermission": "Modifica permesso",
+    "deletePermission": "Elimina permesso",
+    "name": "Nome permesso",
+    "nameHelp": "Generato automaticamente da risorsa:azione",
+    "displayName": "Nome visualizzato",
+    "description": "Descrizione",
+    "resource": "Risorsa",
+    "action": "Azione",
+    "selectResource": "Seleziona risorsa",
+    "allResources": "Tutte le risorse",
+    "allActions": "Tutte le azioni",
+    "useCustomResource": "Aggiungi nuova risorsa",
+    "actionHelp": "L'azione consentita da questo permesso",
+    "noPermissionsFound": "Nessun permesso trovato",
+    "addToResource": "Aggiungi permesso a {{resource}}",
+    "confirmDelete": "Sei sicuro di voler eliminare il permesso \"{{name}}\"? Questo potrebbe influenzare i ruoli che utilizzano questo permesso.",
+    "messages": {
+      "created": "Permesso creato con successo",
+      "updated": "Permesso aggiornato con successo",
+      "deleted": "Permesso eliminato con successo"
+    },
+    "errors": {
+      "loadFailed": "Caricamento permessi fallito",
+      "notFound": "Permesso non trovato",
+      "createFailed": "Creazione permesso fallita",
+      "updateFailed": "Aggiornamento permesso fallito",
+      "deleteFailed": "Eliminazione permesso fallita"
+    }
+  },
+  "categories": {
+    "title": "Categorie",
+    "description": "Gestisci categorie e sezioni immobiliari",
+    "createCategory": "Crea categoria",
+    "editCategory": "Modifica categoria",
+    "deleteCategory": "Elimina categoria",
+    "viewList": "Vista elenco",
+    "viewBySection": "Visualizza per sezione",
+    "name": "Nome",
+    "names": "Nomi (Multilingue)",
+    "slug": "Slug",
+    "slugHelp": "Identificatore URL-friendly (minuscolo, solo trattini)",
+    "section": "Sezione",
+    "icon": "Icona",
+    "iconHelp": "Nome icona Bootstrap (senza prefisso 'bi-')",
+    "sortOrder": "Ordine",
+    "isActive": "Attivo",
+    "noResults": "Nessuna categoria trovata",
+    "noCategories": "Nessuna categoria in questa sezione",
+    "searchPlaceholder": "Cerca categorie...",
+    "namePlaceholder": "Inserisci nome in {{lang}}",
+    "deleteConfirmation": "Sei sicuro di voler eliminare questa categoria?",
+    "deleteWarning": "Questo potrebbe influenzare le proprietà che utilizzano questa categoria.",
+    "fetchError": "Caricamento categorie fallito",
+    "sections": {
+      "residential": "Residenziale",
+      "commercial": "Commerciale",
+      "land": "Terreno",
+      "parking": "Parcheggio",
+      "special": "Speciale"
+    },
+    "messages": {
+      "created": "Categoria creata con successo",
+      "updated": "Categoria aggiornata con successo",
+      "deleted": "Categoria eliminata con successo"
+    },
+    "errors": {
+      "loadFailed": "Caricamento categorie fallito",
+      "createFailed": "Creazione categoria fallita",
+      "updateFailed": "Aggiornamento categoria fallito",
+      "deleteFailed": "Eliminazione categoria fallita"
+    }
+  },
+  "common": {
+    "active": "Attivo",
+    "inactive": "Inattivo",
+    "allStatuses": "Tutti gli stati",
+    "showingOf": "Mostrando {{showing}} di {{total}}",
+    "previous": "Precedente",
+    "next": "Successivo",
+    "search": "Cerca...",
+    "view": "Visualizza",
+    "edit": "Modifica",
+    "delete": "Elimina",
+    "cancel": "Annulla",
+    "save": "Salva",
+    "create": "Crea",
+    "back": "Indietro",
+    "loading": "Caricamento...",
+    "selected": "selezionato/i",
+    "noDescription": "Nessuna descrizione",
+    "createdAt": "Creato il",
+    "updatedAt": "Aggiornato il",
+    "errorOccurred": "Si è verificato un errore",
+    "error": "Errore",
+    "all": "Tutti",
+    "clear": "Cancella",
+    "status": "Stato",
+    "saving": "Salvataggio...",
+    "deleting": "Eliminazione...",
+    "actions": "Azioni",
+    "languages": {
+      "en": "Inglese",
+      "fr": "Francese",
+      "de": "Tedesco",
+      "it": "Italiano"
+    }
+  }
+}
