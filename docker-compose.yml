@@ -1,0 +1,43 @@
+# =============================================
+# DOCKER COMPOSE - Immobilier Admin Panel (React)
+# =============================================
+# Standalone development setup.
+# Requires the API to be running separately.
+# =============================================
+# Usage: docker compose up
+# =============================================
+
+services:
+  admin-panel:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: immobilier_admin_panel_dev
+    restart: unless-stopped
+    ports:
+      - '5174:5174'
+    volumes:
+      - ./src:/app/src:cached
+      - ./public:/app/public:cached
+      - ./index.html:/app/index.html:cached
+      - ./vite.config.ts:/app/vite.config.ts:cached
+      - ./tsconfig.json:/app/tsconfig.json:cached
+      - node_modules:/app/node_modules
+    environment:
+      - VITE_API_BASE_URL=http://localhost:4003/api/v1
+      - VITE_API_TIMEOUT=30000
+      - VITE_APP_NAME=Immobilier Admin
+      - VITE_DEFAULT_LANGUAGE=en
+      - VITE_ENABLE_MOCK_API=false
+      - VITE_ENABLE_DEV_TOOLS=true
+    networks:
+      - immobilier_network
+
+networks:
+  immobilier_network:
+    external: true
+    name: immobilier_network
+
+volumes:
+  node_modules:
+    name: immobilier_admin_panel_node_modules_dev
