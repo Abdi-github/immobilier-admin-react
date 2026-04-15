@@ -63,9 +63,8 @@ export function Sidebar() {
         })}
       >
         <div className="sidebar-header d-flex align-items-center justify-content-between p-3">
-          <span className="sidebar-brand text-white fw-bold">
-            {sidebarCollapsed ? 'IM' : 'Immobilier'}
-          </span>
+          <img src="/logo.svg" alt="Immobilier" className={sidebarCollapsed ? 'd-none' : ''} style={{ height: 28, filter: 'brightness(0) invert(1)' }} />
+          {sidebarCollapsed && <span className="sidebar-brand text-white fw-bold">IM</span>}
           <button
             className="btn btn-link text-white d-none d-lg-block p-0"
             onClick={() => dispatch(toggleSidebar())}

@@ -20,15 +20,14 @@ export const amenitiesApi = api.injectEndpoints({
      * Get all amenities (paginated)
      */
     getAmenities: builder.query<PaginatedResponse<Amenity>, AmenityQueryParams>({
-      query: (params) => {
-        return {
-          url: '/public/amenities',
-          params: {
-            page: params.page,
-            limit: params.limit,
-            sort: params.sort,
-            is_active: params.is_active,
-            group: params.group,
+      query: (params) => ({
+        url: '/public/amenities',
+        params: {
+          page: params.page,
+          limit: params.limit,
+          sort: params.sort,
+          is_active: params.is_active,
+          group: params.group,
           search: params.search,
         },
       }),

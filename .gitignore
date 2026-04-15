@@ -29,3 +29,6 @@ coverage/
 # Misc
 *.tgz
 .cache
+
+# Production secrets (use .env.production.example as template)
+.env.production

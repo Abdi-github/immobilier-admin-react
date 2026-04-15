@@ -90,7 +90,7 @@ export function LoginPage() {
         <Card className="shadow-sm">
           <Card.Body className="p-4">
             <div className="text-center mb-4">
-              <h1 className="h3 fw-bold text-primary">Immobilier</h1>
+              <img src="/logo.svg" alt="Immobilier" style={{ height: 36 }} className="mx-auto mb-2" />
               <p className="text-muted">{t('auth.loginTitle')}</p>
             </div>
 

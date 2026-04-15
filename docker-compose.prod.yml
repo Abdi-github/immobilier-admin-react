@@ -1,0 +1,32 @@
+services:
+  admin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: immobilier_admin_prod
+    restart: unless-stopped
+    ports:
+      - "5174:80"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - immobilier_network
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.immobilier-admin.rule=Host(`immobilier-admin.swiftapp.ch`)"
+      - "traefik.http.routers.immobilier-admin.entrypoints=websecure"
+      - "traefik.http.routers.immobilier-admin.tls.certresolver=letsencrypt"
+      - "traefik.http.services.immobilier-admin.loadbalancer.server.port=80"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+networks:
+  immobilier_network:
+    external: true
+  traefik:
+    external: true

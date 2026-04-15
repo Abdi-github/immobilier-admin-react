@@ -20,15 +20,14 @@ export const categoriesApi = api.injectEndpoints({
      * Get all categories (paginated)
      */
     getCategories: builder.query<PaginatedResponse<Category>, CategoryQueryParams>({
-      query: (params) => {
-        return {
-          url: '/public/categories',
-          params: {
-            page: params.page,
-            limit: params.limit,
-            sort: params.sort,
-            is_active: params.is_active,
-            section: params.section,
+      query: (params) => ({
+        url: '/public/categories',
+        params: {
+          page: params.page,
+          limit: params.limit,
+          sort: params.sort,
+          is_active: params.is_active,
+          section: params.section,
           search: params.search,
         },
       }),
