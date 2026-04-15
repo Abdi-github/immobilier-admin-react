@@ -5,8 +5,8 @@ services:
       dockerfile: Dockerfile
     container_name: immobilier_admin_prod
     restart: unless-stopped
-    ports:
-      - "5174:80"
+    expose:
+      - "80"
     environment:
       - NODE_ENV=production
     networks:
