@@ -22,6 +22,10 @@ services:
       - "traefik.http.services.immobilier-admin.loadbalancer.server.port=80"
       - "sablier.enable=true"
       - "sablier.group=immobilier"
+    deploy:
+      resources:
+        limits:
+          memory: 64M
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://127.0.0.1/"]
       interval: 30s
