@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Card, Form, Button, Alert, Row, Col } from 'react-bootstrap';
+import { Card, Form, Button, Alert, Row, Col, Badge } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -16,6 +16,13 @@ const loginSchema = z.object({
 });
 
 type LoginFormData = z.infer<typeof loginSchema>;
+
+const DEMO_ACCOUNTS = [
+  { role: 'Super Admin', email: 'superadmin.en@immobilier.ch', password: 'Password123!', variant: 'danger' },
+  { role: 'Platform Admin', email: 'platformadmin1.en@immobilier.ch', password: 'Password123!', variant: 'warning' },
+  { role: 'Agency Admin', email: 'agencyadmin1.en@immobilier.ch', password: 'Password123!', variant: 'info' },
+  { role: 'Agent', email: 'agent1.en@immobilier.ch', password: 'Password123!', variant: 'success' },
+] as const;
 
 interface LocationState {
   from?: { pathname: string };
@@ -54,10 +61,17 @@ export function LoginPage() {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
   });
+
+  const fillDemoAccount = (account: typeof DEMO_ACCOUNTS[number]) => {
+    setValue('email', account.email, { shouldValidate: true });
+    setValue('password', account.password, { shouldValidate: true });
+    setError(null);
+  };
 
   const onSubmit = async (data: LoginFormData) => {
     setError(null);
@@ -143,6 +157,26 @@ export function LoginPage() {
                 {isLoading ? t('common.loading') : t('auth.login')}
               </Button>
             </Form>
+
+            <div className="mt-4 pt-3 border-top">
+              <p className="text-muted text-center small mb-2">
+                <i className="bi bi-unlock me-1" />
+                Demo Accounts — click to fill credentials
+              </p>
+              <div className="d-flex flex-wrap gap-2 justify-content-center">
+                {DEMO_ACCOUNTS.map((account) => (
+                  <Button
+                    key={account.role}
+                    variant={`outline-${account.variant}`}
+                    size="sm"
+                    onClick={() => fillDemoAccount(account)}
+                    className="text-nowrap"
+                  >
+                    <Badge bg={account.variant} className="me-1">{account.role}</Badge>
+                  </Button>
+                ))}
+              </div>
+            </div>
           </Card.Body>
         </Card>
       </Col>

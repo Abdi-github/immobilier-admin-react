@@ -40,7 +40,7 @@ export const authApi = api.injectEndpoints({
       invalidatesTags: ['Auth'],
       async onQueryStarted(_, { queryFulfilled }) {
         try {
-          const { data } = await queryFulfilled;
+          await queryFulfilled;
         } catch (error) {
         }
       },
